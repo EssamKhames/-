@@ -451,140 +451,115 @@ class Polynomial implements IPolynomialSolver {
  	}
  	return convert(Fc,Fe);
  }
-  
 
-
-
-   public static void main(String[] argv){
-	   Polynomial abdel = new Polynomial();
-       int [][] hamada = new int [10][2];
-       Ae.add(3);
-        Ac.add(1);
-        Ae.add(2);
-        Ac.add(-1);
-        Ac.add(-1);
-        Ae.add(1);
-
-         Be.add(2);
-         Bc.add(-1);
-         Bc.add(-1);
-         Be.add(1);
-         Bc.add(2);
-         Be.add(0);
-
-         System.out.println(abdel.multiply('A','B'));
-         String a = abdel.print('A');
-         String b=  abdel.print('B');
-
-        String s = abdel.print('R');
-        System.out.println("A : "+a);
-         System.out.println("B: "+b);
-        System.out.println("A-B: "+s);
-   }}
- 
-/*
 public static void main (String args[]) {
-		int z = 0;
-		for(int h = 0;h<10 ; h++) {
-		System.out.println("Please choose an action\r");
-	       System.out.println("-----------------------\r");
-	       System.out.println("1- Set a polynomial variable\r\n" + "2- Print the value of a polynomial variable\r\n" + "3- Add two polynomials\r\n" + "4- Subtract two polynomials\r\n"+"5- Multiply two polynomials\r\n"+"6- Evaluate a polynomial at some point\r\n"+"7- Clear a polynomial variable\r\n"+"====================================================================\r\n");   
-		Scanner sc = new Scanner(System.in);
-		int input = sc.nextInt();
-		int test = input ;
-		int k = 0 ; int [] term2 = new int [40]   ;
-		if(input==1) 
-		{
-		System.out.println("Insert the variable name: A, B or C\r\n" );
-		String poly = sc.nextLine() ;
-		System.out.print("Insert the polynomial terms in the form:\r\n" + "(coeff1, exponent1), (coeff2, exponent2), ..\r\n" );
-		String essam = sc.next();int d = 0 ; int w = 0 ;
-		System.out.println("====================================================================\r\n");
-		int [][] term = new int[20][2];
-		for(int f = 0; f< essam.length() ; f++) {
-			char A = '0' ;
-			if(essam.charAt(f)!=' '&&essam.charAt(f)!=','&&essam.charAt(f)!='('&&essam.charAt(f)!=')') {
-				term2[d]=Character.getNumericValue(essam.charAt(f))-Character.getNumericValue(A);
-				d++;
-			}
-			}
-		int r = 0 ; int q = 0 ; int t = 0 ;
-		for(int i = 0; i<term2.length ; i++) {
-			if(i%2==0) {
-				term [q][0] = term2[r] ;
-				r++;
-			}
-			else {
-				term [q][1] = term2 [r] ;
-				r++;
-			}
-			if(i%2==1) {
-				q++;
-			}
-		}
-		setPolynomial(poly.charAt(0),term);
-		System.out.print("Polynomial " );
-		System.out.print(poly);System.out.println(" "+ "is set\n");
-		}
-		else if (input==2) {
-			System.out.println("Insert the variable name: A, B, C or R");
-			String poly = sc.next();
-		String output =	print(poly.charAt(0));
-		System.out.print(output);
-		System.out.println("====================================================================\r\n");
-		}
-		else if (input==3) {System.out.println("Enter the Poly1\r\n");
-		String poly1 = sc.next();
-		System.out.println("Enter the Poly2\r\n");
-		String poly2 = sc.next();
-		int array[][] ;
-		array =	add(poly1.charAt(0),poly2.charAt(0));
-		for(int e = 0;e<array.length-1 ; e++ ) {
-			System.out.print("("+" "+array[e][0]+","+" "+array[e][1]+")"+" , ");
-		}
-		System.out.println("====================================================================\r\n");
-		}
-		else if (input==4) {
-		System.out.println("Enter the Poly1\r\n");
-		String poly11 = sc.next();
-		System.out.println("Enter the Poly2\r\n");
-		String poly22 = sc.next();
-		int array2 [] [];
-		array2	= subtract(poly11.charAt(0),poly22.charAt(0));
-		for(int e = 0;e<array2.length-1 ; e++ ) {
-			System.out.print("("+" "+array2[e][0]+","+" "+array2[e][1]+")"+" , ");
-		}
-		System.out.println("====================================================================\r\n");
-		}
-		else if (input==5) {
-			
-		System.out.println("Enter the Poly1\r\n");
-		String poly111 = sc.next();
-		System.out.println("Enter the Poly2\r\n");
-		String poly222 = sc.next();
-		int array3 [] [];
-		array3	= subtract(poly111.charAt(0),poly222.charAt(0));
-		for(int e = 0;e<array3.length-1 ; e++ ) {
-			System.out.print("("+" "+array3[e][0]+","+" "+array3[e][1]+")"+" , ");
-		}		System.out.println("====================================================================\r\n");
-		}
-		else if (input==6) {
-			System.out.println("Enter the poly \r\n ");
-			String Poly = sc.next();
-			System.out.println("Enter the Value\r\n");
-			float zezo = sc.nextFloat();
-			float sasa = evaluatePolynomial( Poly.charAt(0) , zezo);
-			System.out.println(" "+sasa);
-			System.out.println("====================================================================\r\n");
-
-		}
-		else if (input==7) {
-			String c = sc.next() ; 
-			clearPolynomial( c.charAt(0) );
-			System.out.println("====================================================================\r\n");
-		}
-		else {System.out.println("Invaild Please try again\n") ;}
-		}
-	}
-
-*/
+        int z = 0;
+        BufferedReader reader = new BufferedReader (new InputStreamReader(System.in));
+         Polynomial abdel = new Polynomial();
+        for(int h = 0;h<10 ; h++) {
+        System.out.println("Please choose an action\r");
+           System.out.println("-----------------------\r");
+           System.out.println("1- Set a polynomial variable\r\n" + "2- Print the value of a polynomial variable\r\n" + "3- Add two polynomials\r\n" + "4- Subtract two polynomials\r\n"+"5- Multiply two polynomials\r\n"+"6- Evaluate a polynomial at some point\r\n"+"7- Clear a polynomial variable\r\n"+"====================================================================\r\n");  
+        Scanner sc = new Scanner(System.in);
+        int input = sc.nextInt();
+        int [] term2 = new int [40]   ;
+        if(input==1)
+        {
+        System.out.println("Insert the variable name: A, B or C\r\n" );
+        String poly = sc.next() ;
+        System.out.print("Insert the polynomial terms in the form:\r\n" + "(coeff1, exponent1), (coeff2, exponent2), ..\r\n" );
+        String essam = null;
+        try {
+            essam = reader.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+       
+        int d = 0 ;
+        System.out.println("====================================================================\r\n");
+        int [][] term = new int[20][2];
+        for(int f = 0; f< essam.length() ; f++) {
+            char A = '0' ;
+            if(essam.charAt(f)!=' '&&essam.charAt(f)!=','&&essam.charAt(f)!='('&&essam.charAt(f)!=')') {
+                term2[d]=Character.getNumericValue(essam.charAt(f))-Character.getNumericValue(A);
+                d++;
+            }
+            }
+        int r = 0 ; int q = 0 ; int t = 0 ;
+        for(int i = 0; i<term2.length ; i++) {
+            if(i%2==0) {
+                term [q][0] = term2[r] ;
+                r++;
+            }
+            else {
+                term [q][1] = term2 [r] ;
+                r++;
+            }
+            if(i%2==1) {
+                q++;
+            }
+        }
+        abdel.setPolynomial(poly.charAt(0),term);
+        System.out.print("Polynomial " );
+        System.out.print(poly);System.out.println(" "+ "is set\n");
+        }
+        else if (input==2) {
+            System.out.println("Insert the variable name: A, B, C or R");
+            String poly = sc.next();
+        String output = abdel.print(poly.charAt(0));
+        System.out.print(output);
+        System.out.println("====================================================================\r\n");
+        }
+        else if (input==3) {System.out.println("Enter the Poly1\r\n");
+        String poly1 = sc.next();
+        System.out.println("Enter the Poly2\r\n");
+        String poly2 = sc.next();
+        int array[][] ;
+        array = abdel.add(poly1.charAt(0),poly2.charAt(0));
+        for(int e = 0;e<array.length-1 ; e++ ) {
+            System.out.print("("+" "+array[e][0]+","+" "+array[e][1]+")"+" , ");
+        }
+        System.out.println("====================================================================\r\n");
+        }
+        else if (input==4) {
+        System.out.println("Enter the Poly1\r\n");
+        String poly11 = sc.next();
+        System.out.println("Enter the Poly2\r\n");
+        String poly22 = sc.next();
+        int array2 [] [];
+        array2  = abdel.subtract(poly11.charAt(0),poly22.charAt(0));
+        for(int e = 0;e<array2.length-1 ; e++ ) {
+            System.out.print("("+" "+array2[e][0]+","+" "+array2[e][1]+")"+" , ");
+        }
+        System.out.println("====================================================================\r\n");
+        }
+        else if (input==5) {
+           
+        System.out.println("Enter the Poly1\r\n");
+        String poly111 = sc.next();
+        System.out.println("Enter the Poly2\r\n");
+        String poly222 = sc.next();
+        int array3 [] [];
+        array3  = abdel.subtract(poly111.charAt(0),poly222.charAt(0));
+        for(int e = 0;e<array3.length-1 ; e++ ) {
+            System.out.print("("+" "+array3[e][0]+","+" "+array3[e][1]+")"+" , ");
+        }       System.out.println("====================================================================\r\n");
+        }
+        else if (input==6) {
+            System.out.println("Enter the poly \r\n ");
+            String Poly = sc.next();
+            System.out.println("Enter the Value\r\n");
+            float zezo = sc.nextFloat();
+            float sasa = abdel.evaluatePolynomial( Poly.charAt(0) , zezo);
+            System.out.println(" "+sasa);
+            System.out.println("====================================================================\r\n");
+ 
+        }
+        else if (input==7) {
+            String c = sc.next() ;
+            abdel.clearPolynomial( c.charAt(0) );
+            System.out.println("====================================================================\r\n");
+        }
+        else {System.out.println("Invaild Please try again\n") ;}
+        }
+    }
